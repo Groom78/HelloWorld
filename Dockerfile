@@ -1,4 +1,13 @@
-FROM bash:latest
-COPY hello.sh /hello.sh
-RUN chmod +x /hello.sh
-CMD ["/hello.sh"]
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+
+EXPOSE 80
+
+CMD ["flask", "run", "--port=80"]
