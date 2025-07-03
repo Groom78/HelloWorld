@@ -14,5 +14,5 @@ spec:
     spec:
       containers:
         - name: hello
-          image: 192.168.64.12:5000/app:latest
+          image: 192.168.64.12:5000/my-app:latest
           imagePullPolicy: Always
