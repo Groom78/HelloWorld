@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/kullanici/myapp.git'
+                git 'https://github.com/Groom78/HelloWorld.git'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Deploy to K8s') {
             steps {
-                sh 'kubectl apply -f k8s/deployment.yaml'
+                sh 'kubectl apply -f deployment.yaml'
             }
         }
     }
