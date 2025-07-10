@@ -5,7 +5,7 @@ metadata:
   namespace: jenkins-ns
 spec:
   selector:
-    app: my-app
+    app: myapp
   type: NodePort
   ports:
     - protocol: TCP
