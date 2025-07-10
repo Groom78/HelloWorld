@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/Groom78/HelloWorld.git'
+                git 'https://github.com/Groom78/HelloWorld.git',
+            	branch: 'main'
             }
         }
 
