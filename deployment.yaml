@@ -7,13 +7,13 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-app
+      app: myapp
   template:
     metadata:
       labels:
-        app: my-app
+        app: myapp
     spec:
       containers:
         - name: hello
-          image: 192.168.64.26:5000/my-app:latest
+          image: 192.168.64.26:5000/myapp:latest
           imagePullPolicy: Always

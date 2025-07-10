@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = "192.168.64.26:5000/myapp"
+        IMAGE = "192.168.64.26:5000/myapp:v3"
     }
 
     stages {
