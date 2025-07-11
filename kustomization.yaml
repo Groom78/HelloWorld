@@ -9,9 +9,12 @@ patches:
       kind: Deployment
       name: hello-deployment
     patch: |-
-      - op: replace
-        path: /spec/template/spec/containers/0/resources/limits
+      - op: add
+        path: /spec/template/spec/containers/0/resources
         value:
-          cpu: "300m"
-          memory: "256Mi"
-
+          limits:
+            cpu: "300m"
+            memory: "256Mi"
+          requests:
+            cpu: "50m"
+            memory: "16Mi"
